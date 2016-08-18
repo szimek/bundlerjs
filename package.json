@@ -4,15 +4,16 @@
   "description": "Bundler.js tries to bring the simplicity of Ruby Bundler to Node.js®",
   "main": "index.js",
   "scripts": {
-    "test": "eslint ."
+    "test": "bundlejs check && eslint ."
   },
   "bin": {
     "bundlejs": "./bin/cli.js"
   },
+  "main": "./lib/cli-engine.js",
   "author": "Szymon Nowak",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "3.3.0",
+    "eslint": "3.3.1",
     "eslint-config-airbnb-base": "5.0.2",
     "eslint-friendly-formatter": "2.0.6",
     "eslint-plugin-import": "1.13.0"

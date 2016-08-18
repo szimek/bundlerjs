@@ -1,10 +1,20 @@
 #!/usr/bin/env node
+/* eslint no-console: "off" */
+
 const colors = require('colors');
 const yargs = require('yargs');
-const CLIEngine = require('../lib/cli-engine');
+const Bundler = require('../lib/cli-engine');
 const version = require('../package.json').version;
 
-// TODO use process.exit(<code>) on errors
+function onSuccess(message) {
+  if (message) console.log(colors.green(message));
+  process.exit(0);
+}
+
+function onError(message) {
+  if (message) console.log(colors.red(message));
+  process.exit(0);
+}
 
 yargs
   .command(
@@ -12,7 +22,7 @@ yargs
     // eslint-disable-next-line max-len
     'Check if the dependencies listed in package.json are satisfied by currently installed packages',
     {},
-    CLIEngine.check
+    () => Bundler.check().then(onSuccess, onError)
   );
 
 yargs
@@ -20,7 +30,7 @@ yargs
     'install',
     ' Install the dependencies specified in your package.json',
     {},
-    CLIEngine.install
+    () => Bundler.install().then(onSuccess, onError)
   );
 
 yargs
@@ -40,7 +50,8 @@ const command = commands[0];
 
 // Lame way of handling the default and invalid commands
 if (!commands.length) {
-  CLIEngine.install();
+  Bundler.install().then(onSuccess, onError);
 } else if (availableCommands.indexOf(command) === -1 || commands.length > 1) {
+  // eslint-disable-next-line no-console
   console.log(colors.red(`Could not find command "${command}".`));
 }

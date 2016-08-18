@@ -213,9 +213,9 @@
       "resolved": "https://registry.npmjs.org/escope/-/escope-3.6.0.tgz"
     },
     "eslint": {
-      "version": "3.3.0",
-      "from": "eslint@3.3.0",
-      "resolved": "https://registry.npmjs.org/eslint/-/eslint-3.3.0.tgz"
+      "version": "3.3.1",
+      "from": "eslint@3.3.1",
+      "resolved": "https://registry.npmjs.org/eslint/-/eslint-3.3.1.tgz"
     },
     "eslint-config-airbnb-base": {
       "version": "5.0.2",
@@ -2250,6 +2250,6 @@
     }
   },
   "bundlejs": {
-    "package": "4ae02b63e2f963e5103f4aac80fc752a"
+    "package": "1485c18a89d25083d9fbe56f790ddd18"
   }
 }
