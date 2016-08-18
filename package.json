@@ -1,5 +1,5 @@
 {
-  "name": "bundlerjs",
+  "name": "@szimek/bundlerjs",
   "version": "0.0.1",
   "description": "Bundler.js tries to bring the simplicity of Ruby Bundler to Node.js®",
   "main": "./lib/bundler.js",
