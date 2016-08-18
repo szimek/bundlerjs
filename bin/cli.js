@@ -3,7 +3,7 @@
 
 const colors = require('colors');
 const yargs = require('yargs');
-const Bundler = require('../lib/cli-engine');
+const Bundler = require('../lib/bundler');
 const version = require('../package.json').version;
 
 function onSuccess(message) {

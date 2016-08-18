@@ -2,14 +2,13 @@
   "name": "bundlerjs",
   "version": "0.0.1",
   "description": "Bundler.js tries to bring the simplicity of Ruby Bundler to Node.js®",
-  "main": "index.js",
+  "main": "./lib/bundler.js",
   "scripts": {
     "test": "bundlejs check && eslint ."
   },
   "bin": {
     "bundlejs": "./bin/cli.js"
   },
-  "main": "./lib/cli-engine.js",
   "author": "Szymon Nowak",
   "license": "MIT",
   "devDependencies": {
