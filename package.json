@@ -18,10 +18,10 @@
     "eslint-plugin-import": "*"
   },
   "dependencies": {
-    "colors": "1.1.2",
-    "debug": "2.2.0",
-    "lodash": "4.15.0",
+    "colors": "*",
+    "debug": "*",
+    "lodash": "*",
     "npm": "^3.10.7",
-    "yargs": "5.0.0"
+    "yargs": "*"
   }
 }

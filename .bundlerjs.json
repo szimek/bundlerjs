@@ -1,13 +1,13 @@
 {
   "dependencies": {
-    "colors": "1.1.2",
-    "debug": "2.2.0",
-    "lodash": "4.15.0",
+    "colors": "*",
+    "debug": "*",
+    "lodash": "*",
     "npm": "^3.10.7",
-    "yargs": "5.0.0",
+    "yargs": "*",
     "eslint": "*",
     "eslint-config-airbnb-base": "*",
-    "eslint-friendly-formatter": "2.0.6",
+    "eslint-friendly-formatter": "*",
     "eslint-plugin-import": "*"
   },
   "version": "0.0.2"
