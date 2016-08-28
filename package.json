@@ -1,6 +1,6 @@
 {
   "name": "@szimek/bundlerjs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Bundler.js tries to bring the simplicity of Ruby Bundler to npm",
   "main": "./lib/bundler.js",
   "scripts": {
@@ -12,16 +12,16 @@
   "author": "Szymon Nowak",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "3.3.1",
-    "eslint-config-airbnb-base": "5.0.2",
-    "eslint-friendly-formatter": "2.0.6",
-    "eslint-plugin-import": "1.13.0"
+    "eslint": "*",
+    "eslint-config-airbnb-base": "*",
+    "eslint-friendly-formatter": "*",
+    "eslint-plugin-import": "*"
   },
   "dependencies": {
     "colors": "1.1.2",
     "debug": "2.2.0",
     "lodash": "4.15.0",
-    "npm": "3.10.7",
+    "npm": "^3.10.7",
     "yargs": "5.0.0"
   }
 }

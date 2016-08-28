@@ -28,10 +28,19 @@ yargs
 yargs
   .command(
     'install',
-    ' Install the dependencies specified in your package.json',
+    ' Install the dependencies specified in your package.json file',
     {},
     () => Bundler.install().then(onSuccess, onError)
   );
+
+yargs
+  .command(
+    'update',
+    'Update the dependencies specified in your package.json file',
+    {},
+    () => Bundler.update().then(onSuccess, onError)
+  );
+
 
 yargs
   .alias('h', 'help')
