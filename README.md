@@ -69,27 +69,35 @@ If a `npm-shrinkwrap.json` does exist, and you have updated your `package.json`,
 `bundlejs update eslint` __NOT IMPLEMENTED YET__
 
 ### JavaScript API
-```
+`Bundler.check()`
+``` javascript
 const Bundler = require('bundlerjs');
 const colors = require('colors');
 
-// Asynchronous version
 Bundler.check().then(
-  () => { ... do whatever }
-  (message) => {
-    console.log(colors.red(message));
+  () => { /* everything is ok, do whatever */ }
+  (error) => {
+    console.log(colors.red(error));
     process.exit(1);
   }
 );
+```
 
-// Synchronous version
+`Bundler.checkSync()` - synchronous version of `check()`
+``` javascript
 try {
   Bundler.checkSync();
 } catch (error) {
   console.log(colors.red(error));
   process.exit(1);
 }
+
+// everything is ok, do whatever
 ```
+
+`Bundler.install()`
+
+`Bundler.update()`
 
 ## Known Issues
 Bundler still uses npm to handle dependency resolution and locking and thus has all the issues npm has, e.g. it doesn't work properly with [peer dependencies](https://github.com/npm/npm/issues/12909). At the moment bundler.js only handles dependencies and devDependencies.
