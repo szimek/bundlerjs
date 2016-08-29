@@ -66,7 +66,7 @@ If a `npm-shrinkwrap.json` does exist, and you have updated your `package.json`,
 ##### Updating All Dependencies
 `bundlejs update`
 ##### Updating A List Of Dependencies
-`bundlejs update eslint` __NOT IMPLEMENTED YET__
+`bundlejs update eslint eslint-config-airbnb-base`
 
 ### JavaScript API
 `Bundler.check()`

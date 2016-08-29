@@ -35,10 +35,10 @@ yargs
 
 yargs
   .command(
-    'update',
+    'update [packages..]',
     'Update the dependencies specified in your package.json file',
     {},
-    () => Bundler.update().then(onSuccess, onError)
+    (args) => Bundler.update(args.packages).then(onSuccess, onError)
   );
 
 
