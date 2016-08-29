@@ -45,6 +45,9 @@ In general, when working with an application managed with bundler.js, you should
 
   `bundlejs update`
 
+* You can also use bundler.js to automatically check if the dependencies listed in `npm-shrinkwrap.json` file are satisfied by currently installed packages before you run any task. You can add `Bundler.checkSync()` call at the top of your `webpack.config.js`, `Gruntfile`, `Gulpfile.js` etc. If you use npm scripts, you can just call `bundlejs check` before your own script, e.g. `'start': 'bundlejs check && webpack-dev-server'`.
+
+
 ### CLI Commands
 #### check
 `bundlejs check` - Check if the dependencies listed in `npm-shrinkwrap.json` file are satisfied by currently installed packages
