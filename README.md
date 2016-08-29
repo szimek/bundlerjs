@@ -100,4 +100,8 @@ try {
 `Bundler.update()`
 
 ## Known Issues
-Bundler still uses npm to handle dependency resolution and locking and thus has all the issues npm has, e.g. it doesn't work properly with [peer dependencies](https://github.com/npm/npm/issues/12909). At the moment bundler.js only handles dependencies and devDependencies.
+Bundler still uses npm to handle dependency resolution and locking and thus has all the issues npm has, e.g.
+* it doesn't work properly with [peer dependencies](https://github.com/npm/npm/issues/12909).
+* it creates an [`etc` folder](https://github.com/npm/npm/pull/7249).
+
+At the moment bundler.js only handles dependencies and devDependencies.
