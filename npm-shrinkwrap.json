@@ -1,6 +1,6 @@
 {
   "name": "@szimek/bundlerjs",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "dependencies": {
     "acorn": {
       "version": "3.3.0",

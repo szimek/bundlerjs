@@ -1,6 +1,6 @@
 {
   "name": "@szimek/bundlerjs",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Bundler.js tries to bring the simplicity of Ruby Bundler to npm",
   "main": "./lib/bundler.js",
   "scripts": {
