@@ -44,6 +44,10 @@ In general, when working with an application managed with bundler.js, you should
 * If you want to update all the dependencies to the latest possible versions that still match the dependencies listed in the `package.json`, run
 
   `bundlejs update`
+  
+* If you want to update only some of the dependencies to the latest possible versions that still match the dependencies listed in the `package.json`, run
+
+  `bundlejs update eslint eslint-config-airbnb-base`
 
 * You can also use bundler.js to automatically check if the dependencies listed in `npm-shrinkwrap.json` file are satisfied by currently installed packages before you run any task. You can add `Bundler.checkSync()` call at the top of your `webpack.config.js`, `Gruntfile`, `Gulpfile.js` etc. If you use npm scripts, you can just call `bundlejs check` before your own script, e.g. `'start': 'bundlejs check && webpack-dev-server'`.
 
