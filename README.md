@@ -5,15 +5,15 @@ Bundler.js tries to bring the simplicity of Ruby [Bundler](https://bundler.io) t
 ## NOTE
 :warning: At the moment it's just a proof of concept, highly experimental and not ready yet for production use. :warning:
 
-## Usage
-```
-npm install --save-dev @szimek/bundlerjs
-./node-modules/.bin/bundlejs <command>
-```
-or
+## Installation and Usage
 ```
 npm install --global @szimek/bundlerjs
 bundlejs <command>
+```
+or (less preferable)
+```
+npm install --save-dev @szimek/bundlerjs
+./node-modules/.bin/bundlejs <command>
 ```
 
 To run bundler.js with debug output, run `DEBUG=* bundlejs <command>`.
@@ -44,7 +44,7 @@ In general, when working with an application managed with bundler.js, you should
 * If you want to update all the dependencies to the latest possible versions that still match the dependencies listed in the `package.json`, run
 
   `bundlejs update`
-  
+
 * If you want to update only some of the dependencies to the latest possible versions that still match the dependencies listed in the `package.json` file, run
 
   `bundlejs update eslint eslint-config-airbnb-base`
