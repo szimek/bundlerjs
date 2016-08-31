@@ -45,7 +45,7 @@ In general, when working with an application managed with bundler.js, you should
 
   `bundlejs update`
   
-* If you want to update only some of the dependencies to the latest possible versions that still match the dependencies listed in the `package.json`, run
+* If you want to update only some of the dependencies to the latest possible versions that still match the dependencies listed in the `package.json` file, run
 
   `bundlejs update eslint eslint-config-airbnb-base`
 
@@ -66,7 +66,7 @@ If a `npm-shrinkwrap.json` file does exist, and you have not updated your `packa
 If a `npm-shrinkwrap.json` does exist, and you have updated your `package.json`, it will remove `npm-shrinkwrap.json` file and then run `npm prune`, `npm install` and `npm shrinkwrap`.
 
 #### update
-`bundlejs update` - Update your dependencies to the latest available versions
+`bundlejs update` - Update your dependencies to the latest possible versions that still match the dependencies listed in the `package.json` file
 ##### Updating All Dependencies
 `bundlejs update`
 ##### Updating A List Of Dependencies
