@@ -27,18 +27,32 @@ yargs
 
 yargs
   .command(
-    'install',
+    'install [dev]',
     ' Install the dependencies specified in your package.json file',
-    {},
-    () => Bundler.install().then(onSuccess, onError)
+    { dev: {
+      alias: 'D',
+      default: false,
+      describe: 'Shrinkwrap development dependencies as well' },
+    },
+    (args) => {
+      Bundler.install({ dev: args.dev })
+        .then(onSuccess, onError);
+    }
   );
 
 yargs
   .command(
-    'update [packages..]',
+    'update [dev] [packages..]',
     'Update the dependencies specified in your package.json file',
-    {},
-    (args) => Bundler.update(args.packages).then(onSuccess, onError)
+    { dev: {
+      alias: 'D',
+      default: false,
+      describe: 'Shrinkwrap development dependencies as well',
+    } },
+    (args) => {
+      Bundler.update({ dev: args.dev, pacakges: args.packages })
+        .then(onSuccess, onError);
+    }
   );
 
 
@@ -57,9 +71,11 @@ const argv = yargs.argv;
 const commands = argv._;
 const command = commands[0];
 
-// Lame way of handling the default and invalid commands
+// Super lame way of handling the default and invalid commands, but it looks like this
+// functionality is not provided by yargs.js :/
 if (!commands.length) {
-  Bundler.install().then(onSuccess, onError);
+  Bundler.install({ dev: argv.dev || false })
+    .then(onSuccess, onError);
 } else if (availableCommands.indexOf(command) === -1 || commands.length > 1) {
   // eslint-disable-next-line no-console
   console.log(colors.red(`Could not find command "${command}".`));
