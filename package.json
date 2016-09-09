@@ -4,7 +4,7 @@
   "description": "Bundler.js tries to bring the simplicity of Ruby Bundler to npm",
   "main": "./lib/bundler.js",
   "scripts": {
-    "test": "bundlejs check && eslint ."
+    "lint": "eslint ."
   },
   "bin": {
     "bundlejs": "./bin/cli.js"
@@ -21,7 +21,7 @@
     "colors": "*",
     "debug": "*",
     "lodash": "*",
-    "npm": "^3.10.7",
+    "npm": "^3.10.8",
     "yargs": "*"
   }
 }

@@ -5,6 +5,9 @@ Bundler.js tries to bring the simplicity of Ruby [Bundler](https://bundler.io) t
 ## NOTE
 :warning: At the moment it's just a proof of concept, highly experimental and not ready yet for production use. :warning:
 
+## Motivation
+To provide a consistent environment for your application for developers, CI servers and production servers you should always lock all dependencies your app is using. It is not enough to specify exact versions of your dependencies in your `package.json` file (e.g. using `-E/--save-exact` option), because it does not ensure that dependencies of your dependencies will be installed everywhere with the same version and sometimes this can cause [serious](http://blog.bithound.io/npm-shrinkwrap-your-devdependencies-too/) [problems](https://plus.google.com/u/0/+KonradDzwinel/posts/NECEx8XKcer). Npm does provide a solution - a tool called "shrinkwrap". Unfortunately, using it is not as easy as it could be.
+
 ## Installation and Usage
 ```
 npm install --global @szimek/bundlerjs
@@ -49,7 +52,13 @@ In general, when working with an application managed with bundler.js, you should
 
   `bundlejs update eslint eslint-config-airbnb-base`
 
-* You can also use bundler.js to automatically check if the dependencies listed in `npm-shrinkwrap.json` file are satisfied by currently installed packages before you run any task. You can add `Bundler.checkSync()` call at the top of your `webpack.config.js`, `Gruntfile`, `Gulpfile.js` etc. If you use npm scripts, you can just call `bundlejs check` before your own script, e.g. `"start": "bundlejs check && webpack-dev-server"`.
+### Checking dependencies
+
+You can also use bundler.js to automatically check if the dependencies listed in `npm-shrinkwrap.json` file are satisfied by currently installed packages before you run any task. You can add `Bundler.checkSync()` call at the top of your `webpack.config.js`, `Gruntfile`, `Gulpfile.js` etc. If you use npm scripts, you can just call `bundlejs check` before your own script, e.g. `"start": "bundlejs check && webpack-dev-server"`.
+
+### Deployment
+
+By default bundler.js locks all your dependencies, including `devDependencies`. If you are building your application on a CI server, then you can simply run `bundlejs install` to install them all. However, if you don't need your development dependencies on production server, you can run `bundlejs install --only=prod` to install only your production dependencies.
 
 
 ### CLI Commands

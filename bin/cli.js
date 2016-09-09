@@ -30,7 +30,9 @@ yargs
     'install',
     ' Install the dependencies specified in your package.json file',
     {},
-    () => Bundler.install().then(onSuccess, onError)
+    (args) => {
+      Bundler.install({ only: args.only }).then(onSuccess, onError);
+    }
   );
 
 yargs
