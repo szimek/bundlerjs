@@ -1,6 +1,8 @@
 Bundler.js
 ==============================
-Bundler.js tries to bring the simplicity of Ruby [Bundler](https://bundler.io) to npm. It also <del>brings</del> steals some of its docs :wink:
+Bundler.js tries to bring the simplicity of Ruby [Bundler](https://bundler.io) to npm. It also <del>brings</del> steals some of its docs :wink: 
+
+TL;DR It locks all your dependencies by default (you never have to call `npm shrinkwrap` manually) and makes working with shrinkwrap much easier - it updates the shrinkwrap file automatically whenever you call `bundlejs install` or `bundlejs update`.
 
 ## NOTE
 :warning: At the moment it's just a proof of concept, highly experimental and not ready yet for production use. :warning:
