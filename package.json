@@ -11,6 +11,7 @@
   },
   "author": "Szymon Nowak",
   "license": "MIT",
+  "preferGlobal": true,
   "devDependencies": {
     "eslint": "*",
     "eslint-config-airbnb-base": "*",
