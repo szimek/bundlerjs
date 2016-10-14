@@ -1,5 +1,8 @@
 Bundler.js
 ==============================
+
+tl;dr Just use [Yarn](https://yarnpkg.com/) instead :)
+
 Bundler.js tries to bring the simplicity of Ruby [Bundler](https://bundler.io) to npm. It also <del>brings</del> steals some of its docs :wink: 
 
 TL;DR It locks all your dependencies by default (you never have to call `npm shrinkwrap` manually) and makes working with shrinkwrap much easier - it updates the shrinkwrap file automatically whenever you call `bundlejs install` or `bundlejs update`.
